@@ -15,75 +15,71 @@
       font-weight: bold;
       letter-spacing: 2px;
       font-style: normal;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
     }
-
-    #msg {
-      opacity: 0;
+    #msg{
+      opacity:0;
       position: fixed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: aquamarine;
-      text-shadow: rgb(16, 16, 15) 1px 1px;
+        text-align: center;
+        color: aquamarine;
+        text-shadow: rgb(16, 16, 15) 1px 1px;
       background-image: url("gh.gif");
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      padding: 2rem;
-      font-size: clamp(1rem, 2vw, 1.3rem);
-      line-height: 1.6;
-    }
+        background-repeat: no-repeat;
+     width: 100vw;
+  height: 100vh;
+        background-attachment:fixed;
+        background-size: cover;
+        top:0;
+        left:0;
+       
+    
+        
+        
 
-    #gif {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover; 
     }
+    
+       #gif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; 
+    }
+ 
+  
 
-    @media (max-width: 600px) {
-      #msg {
-        font-size: clamp(1rem, 3.5vw, 1.2rem);
-        padding: 1.5rem;
-      }
-    }
+   
   </style>
 </head>
 <body>
-  <img src="owl.gif" id="gif" hidden />
+  <img src="owl.gif"  id="gif" hidden />
   <div id="msg"></div>
-  <audio id="audio">
+  <audio  id="audio">
     <source src="cheers.mp3">
   </audio>
 
   <script>
     const img = document.getElementById("gif");
     const msg = document.getElementById("msg");
-    const audio = document.getElementById("audio");
+    const audio=document.getElementById("audio");
 
+    // Show the GIF immediately
     img.removeAttribute("hidden");
 
+    // After 5 seconds, hide the gif and show the message
     setTimeout(() => {
       img.style.display = "none";
-      msg.style.opacity = 1;
-      audio.play();
+      msg.style.opacity=1;
+     audio.play();
       msg.innerHTML = `✨ Mischief Managed ✨<br><br>
-        You’ve unlocked every secret, solved every riddle, and kept the magic alive.<br><br>
-        The portraits of Hogwarts whisper your name in gratitude. 💫<br><br>
-        "Thank you, for believing in magic."<br><br>
-        May the stars always guide you, and may your heart forever echo the charm.<br><br>
-        Hogwarts, Home, and Hope.<br><br>
-        🕯️ Until we meet again… Lumos! 🔮`;
+      You’ve unlocked every secret, solved every riddle, and kept the magic alive.<br><br>
+      The portraits of Hogwarts whisper your name in gratitude. 💫<br><br>
+      "Thank you, for believing in magic."<br><br>
+      May the stars always guide you, and may your heart forever echo the charm.<br><br>
+      Hogwarts, Home, and Hope.<br><br>
+      🕯️ Until we meet again… Lumos! 🔮`;
+
+     
     }, 4000);
   </script>
 </body>

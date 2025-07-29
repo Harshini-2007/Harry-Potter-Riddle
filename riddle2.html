@@ -19,18 +19,11 @@
 body {
   background-image: url('riddlepg.png');
   background-repeat: no-repeat;
-  background-position: center center;  /* center it horizontally & vertically */
+  background-position: center 85%;  /* center it horizontally & vertically */
   background-size:cover;              /* make sure it covers entire screen */
   background-attachment: scroll; 
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5vh 5vw;
-  text-align: center;
-  flex-direction: column;
+  min-height: 150vh;
  
-    
 }
 .main{
 
@@ -40,9 +33,7 @@ margin-left: 500px;
  animation:reveal 8s ease forwards;
  color: black;
  font-family: 'Times New Roman', Times, serif;
- font-size: clamp(1rem,2.5vw,1.5rem);
- max-width: 90vw;
- text-align: center;
+ font-size: large;
 }
 @keyframes reveal {
     from{
@@ -63,26 +54,6 @@ margin-left: 500px;
   text-shadow: 0 0 5px whitesmoke;
   animation: open 20s ease forwards;
 }
-.wand-wrapper {
-  position: relative;
-  display: inline-block;
-  margin-top: 5vh;
-}
-
-#wand {
-  height: 20vh;
-  width: auto;
-}
-
-#spark {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 8vw;
-  max-width: 50px;
-  display: none;
-}
 
 
 
@@ -100,10 +71,10 @@ What am I?<br>
 <span id="ans" ></span><br>
 "Tap the wand to reveal it and reveal further magic"<br>
  </span>
- <div class="wand-wraper">
+
        <img src="wand.png" style="height: 200px; width:200px;"id="wand" onclick="glow()">  
    <img id="spark" src="spark.webp" style="position: absolute; top: 348px; left: 646px; transform: translateX(-50%); display: none; width: 40px;">
-       </div>
+       
     </p>
     <audio id="chime"src="ans.mp3">
     </audio>
@@ -114,13 +85,9 @@ What am I?<br>
 
   const audio=document.getElementById("chime");
    audio.play();
-   const wand=document.getElementById("wand");
   const spark = document.getElementById("spark");
   const ans=document.getElementById("ans");
   spark.style.display="block";
-  const wandRect=wand.getBoundingClientRect();
-  spark.style.left=wandRect.left+wandRect.width/2+"px";
-  spark.style.top=wandRect.top+"px";
   ans.innerHTML="\"THE MIRROR OF ERISED\"";
   ans.style.opacity=1;
   //const glow = document.getElementById("tipGlow");
