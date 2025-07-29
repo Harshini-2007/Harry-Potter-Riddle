@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>riddle 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+
+<style>
+*{
+       font-family: "Playwrite AU QLD", cursive;
+  font-optical-sizing: auto;
+  font-weight:bold;
+  letter-spacing: 2px;
+  font-style: normal;
+}
+body {
+  background-image: url('riddlepg.png');
+  background-repeat: no-repeat;
+  background-position: center 85%;  /* center it horizontally & vertically */
+  background-size:cover;              /* make sure it covers entire screen */
+  background-attachment: scroll; 
+  min-height: 150vh;
+ 
+      /* optional: creates a nice scroll effect */
+}
+.main{
+
+margin-top:60px;
+margin-left: 500px;
+ opacity:0;
+ animation:reveal 8s ease forwards;
+ color: black;
+ font-family: 'Times New Roman', Times, serif;
+ font-size: large;
+}
+@keyframes reveal {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes open {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#ans {
+  color: gold;
+  text-shadow: 0 0 5px whitesmoke;
+  animation: open 20s ease forwards;
+}
+
+
+
+    </style>
+    </head>
+
+<body >
+    <p class="main">
+        <span>
+            "I burn to live, I die to rise,<br>
+A crimson flame beneath the skies.<br>
+ In silent flight, I heed the brave,<br>
+I heal the wound, I guard the grave."<br>
+Who am I?<br>
+<span id="ans" ></span><br>
+"Tap the wand to reveal it and reveal further magic"<br>
+ </span>
+
+       <img src="wand.png" style="height: 200px; width:200px;"id="wand" onclick="glow()">  
+   <img id="spark" src="spark.webp" style="position: absolute; top: 348px; left: 646px; transform: translateX(-50%); display: none; width: 40px;">
+       
+    </p>
+    <audio id="chime"src="ans.mp3">
+    </audio>
+</body>
+</html>   
+<script>
+    function glow(){
+
+  const audio=document.getElementById("chime");
+   audio.play();
+  const spark = document.getElementById("spark");
+  const ans=document.getElementById("ans");
+  spark.style.display="block";
+  ans.innerHTML="\"FAWKES\"";
+  ans.style.opacity=1;
+  //const glow = document.getElementById("tipGlow");
+ 
+ 
+  setTimeout(()=>{window.location.href="riddle9.html"},
+5000);
+
+}
+</script>
