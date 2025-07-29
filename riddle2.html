@@ -19,16 +19,21 @@
 body {
   background-image: url('riddlepg.png');
   background-repeat: no-repeat;
-  background-position: center 85%;  /* center it horizontally & vertically */
+  background-position: center 40%;  /* center it horizontally & vertically */
   background-size:cover;              /* make sure it covers entire screen */
   background-attachment: scroll; 
   min-height: 150vh;
  
 }
 .main{
+display: flex;
+ 
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
 
-margin-top:60px;
-margin-left: 500px;
  opacity:0;
  animation:reveal 8s ease forwards;
  color: black;
