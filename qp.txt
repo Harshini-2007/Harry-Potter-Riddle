@@ -165,3 +165,12 @@ Not by wand... but by what you do.”
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
+
+
+ “I hide you from sight, I silence your breath,<br>
+I shield you from danger, even from Death.<br>
+I’m one of three, both old and sly —<br>
+Worn by the boy who lived not to die.”<br>
+What am I?<br> 
+
+"\"INVISIBILITY CLOAK\"";

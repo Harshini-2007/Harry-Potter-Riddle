@@ -24,25 +24,21 @@ body {
   background-attachment: scroll; 
   min-height: 150vh;
  
-      /* optional: creates a nice scroll effect */
 }
 .main{
-
-
-
- opacity:0;
- animation:reveal 8s ease forwards;
- color: black;
- font-family: 'Times New Roman', Times, serif;
- font-size: large;
- 
-  display: flex;
+display: flex;
  
       flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
       text-align: center;
+
+ opacity:0;
+ animation:reveal 8s ease forwards;
+ color: black;
+ font-family: 'Times New Roman', Times, serif;
+ font-size: large;
 }
 @keyframes reveal {
     from{
@@ -72,10 +68,10 @@ body {
 <body >
     <p class="main">
         <span>
-            “I hide you from sight, I silence your breath,<br>
+           "I hide you from sight, I silence your breath,<br>
 I shield you from danger, even from Death.<br>
 I’m one of three, both old and sly —<br>
-Worn by the boy who lived not to die.”<br>
+Worn by the boy who lived not to die."<br>
 What am I?<br>
 <span id="ans" ></span><br>
 "Tap the wand to reveal it and reveal further magic"<br>
@@ -102,7 +98,7 @@ What am I?<br>
   //const glow = document.getElementById("tipGlow");
  
  
-  setTimeout(()=>{window.location.href="riddle2.html"},
+  setTimeout(()=>{window.location.href="riddle3.html"},
 5000);
 
 }
