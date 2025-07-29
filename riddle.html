@@ -19,22 +19,30 @@
 body {
   background-image: url('riddlepg.png');
   background-repeat: no-repeat;
-  background-position: center 85%;  /* center it horizontally & vertically */
+  background-position: center 40%;  /* center it horizontally & vertically */
   background-size:cover;              /* make sure it covers entire screen */
-  background-attachment: scroll; 
+  background-attachment: fixed; 
   min-height: 150vh;
  
       /* optional: creates a nice scroll effect */
 }
 .main{
 
-margin-top:60px;
-margin-left: 500px;
+
+
  opacity:0;
  animation:reveal 8s ease forwards;
  color: black;
  font-family: 'Times New Roman', Times, serif;
  font-size: large;
+ 
+  display: flex;
+ 
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
 }
 @keyframes reveal {
     from{
