@@ -26,6 +26,7 @@ body {
  
 }
 .main{
+   
 display: flex;
  
       flex-direction: column;
@@ -59,31 +60,57 @@ display: flex;
   text-shadow: 0 0 5px whitesmoke;
   animation: open 20s ease forwards;
 }
+ .wand-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+     
+      align-items: center;
+    
+    }
+    #wand {
+    
+      height: 250px;
+      width: 250px;
+    }
 
+    #spark {
+      position: absolute;
+      top: 50px; /* Adjust if needed */
+      left: 70%;
+      transform: translateX(-50%);
+      display: none;
+      width: 40px;
+    }
+   
 
 
     </style>
     </head>
 
-<body >
-    <p class="main">
-        <span>
-           "I hide you from sight, I silence your breath,<br>
-I shield you from danger, even from Death.<br>
-I’m one of three, both old and sly —<br>
-Worn by the boy who lived not to die."<br>
-What am I?<br>
-<span id="ans" ></span><br>
-"Tap the wand to reveal it and reveal further magic"<br>
- </span>
+<body>
+  <div class="main">
+    <div class="riddle-text">
+      <span>
+        "I hide you from sight, I silence your breath,<br>
+        I shield you from danger, even from Death.<br>
+        I’m one of three, both old and sly —<br>
+        Worn by the boy who lived not to die."<br>
+        What am I?<br>
+        <span id="ans"></span><br>
+        "Tap the wand to reveal it and reveal further magic"<br>
+      </span>
+    </div>
 
-       <img src="wand.png" style="height: 200px; width:200px;"id="wand" onclick="glow()">  
-   <img id="spark" src="spark.webp" style="position: absolute; top: 348px; left: 646px; transform: translateX(-50%); display: none; width: 40px;">
-       
-    </p>
-    <audio id="chime"src="ans.mp3">
-    </audio>
+    <div class="wand-container">
+      <img id="wand" src="wand.png" onclick="glow()" />
+      <img id="spark" src="spark.webp" />
+    </div>
+  </div>
+
+  <audio id="chime" src="ans.mp3"></audio>
 </body>
+
 </html>   
 <script>
     function glow(){

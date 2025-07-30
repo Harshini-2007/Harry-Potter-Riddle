@@ -173,4 +173,16 @@ I’m one of three, both old and sly —<br>
 Worn by the boy who lived not to die.”<br>
 What am I?<br> 
 
-"\"INVISIBILITY CLOAK\"";
+"\"INVISIBILITY CLOAK\""; 
+
+
+
+
+
+ "I show not your face, but your soul's desire,<br>
+A flickering flame, a longing fire.<br>
+Stand before me — no need to speak,<br>
+I reveal the thing you most seek."<br>
+What am I?<br>
+<span id="ans" ></span><br>
+"Tap the wand to reveal it and reveal further magic"<br>
